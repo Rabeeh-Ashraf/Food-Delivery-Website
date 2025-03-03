@@ -5,6 +5,8 @@ export const Storecontext = createContext(null)
 const Storecontextprovider = (props)=>{
 
     const [cartitems,setcartitems]=useState({})
+
+
     const addtocart =(itemId)=>{
         if(!cartitems[itemId]){
             setcartitems((prev)=>({...prev,[itemId]:1}))
@@ -13,8 +15,18 @@ const Storecontextprovider = (props)=>{
             setcartitems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         }
     }
+
+
+    const removefromcart  =(itemId )=>{
+        setcartitems(((prev)=>({...prev,[itemId]:prev[itemId]-1})))
+    }
+
     const Contextvalue = {
-        food_list
+        food_list,
+        cartitems,
+        setcartitems,
+        addtocart,
+        removefromcart,
     }
     return(
         <Storecontext.Provider value={Contextvalue}>

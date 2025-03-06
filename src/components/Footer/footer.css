@@ -48,4 +48,8 @@
 }
 .footer-content-left img{
     cursor: pointer;
+    transition: 0.5s;
+}
+.footer-content-left img:hover{
+    transform: scale(1.05);
 }

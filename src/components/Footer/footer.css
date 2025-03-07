@@ -53,3 +53,14 @@
 .footer-content-left img:hover{
     transform: scale(1.05);
 }
+@media(max-width:750px){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .footer-copyright{
+        text-align: center;
+    }
+}
+

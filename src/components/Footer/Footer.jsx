@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './footer.css'
 import {assets} from '../../assets/assets'
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo} alt="" />
+               <Link to='/' onClick={() => {
+                     window.scrollTo({ top: 0 });
+                      }} > <img src={assets.logo} alt="" /></Link> 
                 <p >Welcome to Tomato, your ultimate solution for fast and reliable food ordering and delivery! Our application is designed to connect food enthusiasts with their favorite restaurants and provide a seamless ordering experience. With Tomato, you can explore a wide variety of cuisines, customize your orders, and enjoy fast deliveries right to your doorstep.</p>
                 <div className="footer-social-icons">
                   <img src={assets.facebook_icon} alt="" />

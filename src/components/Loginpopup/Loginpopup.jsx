@@ -22,7 +22,7 @@ const Loginpopup = ({setShowLogin}) => {
         </div>
         {currstate==="Login"
         ?<p>Create a new account? <span onClick={()=>setcurrstate("Sign Up")}>Click-here</span></p>
-        : <p>Already have an account? <span onClick={()=>setcurrstate("Login")}>login here</span></p>}
+        : <p>Already have an account? <span onClick={()=>setcurrstate("Login")}>Login here</span></p>}
         
        
       </form>

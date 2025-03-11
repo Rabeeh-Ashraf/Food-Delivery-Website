@@ -21,7 +21,12 @@ const Cart = () => {
           {
             return(
               <div className='cart-items-title cart-items-item'>
+                <img src={item.image} alt="" />
                 <p>{item.name}</p>
+                <p>{item.price}</p>
+                <p>{cartitems[item._id]}</p>              {/*for displayiing the quantity*/}
+                <p>{item.price*cartitems[item._id]}</p>       {/*for displaying total */}
+                <p>x</p>
               </div>  
                    )
           }
